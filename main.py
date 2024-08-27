@@ -13,7 +13,7 @@ from tensorflow.keras.optimizers import Adam
 from sklearn.metrics import mean_squared_error, mean_absolute_error, explained_variance_score
 
 # Load the dataset from a CSV file
-df = pd.read_csv('./data/kc_house_data.csv')
+df = pd.read_csv('./data/kaggle_house_data.csv')
 
 # Convert the 'date' column to datetime format
 df['date'] = pd.to_datetime(df['date'])
@@ -47,10 +47,12 @@ print("X_test shape:", X_test.shape)
 model = Sequential()
 
 # Add layers to the model
-model.add(Dense(21, activation='relu'))
-model.add(Dense(21, activation='relu'))
-model.add(Dense(21, activation='relu'))
-model.add(Dense(21, activation='relu'))
+model.add(Dense(30, activation='relu'))
+model.add(Dense(30, activation='relu'))
+model.add(Dense(30, activation='relu'))
+model.add(Dense(30, activation='relu'))
+model.add(Dense(30, activation='relu'))
+
 model.add(Dense(1))
 print("Model architecture defined")
 
